@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationVC = segue.destination as? RecipeDetailedVC, let recipe = sender as? Recipe {
-            
+            destinationVC.recipe = recipe
         }
     }
 }

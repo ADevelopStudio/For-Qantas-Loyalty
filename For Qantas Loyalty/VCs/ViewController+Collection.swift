@@ -29,6 +29,9 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDe
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
             return section == 0 ? recipes.withimages.count : recipes.withoutimages.count
         }
+        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            self.performSegue(withIdentifier: "details", sender: indexPath.section == 0 ? recipes.withimages[indexPath.row] : recipes.withoutimages[indexPath.row])
+        }
     
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             if indexPath.section == 0 {

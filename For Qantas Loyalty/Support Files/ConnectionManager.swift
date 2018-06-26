@@ -63,7 +63,7 @@ struct Recipe: Codable {
     var thumbnail: String
 
     var hrefUrl: URL? {
-        return URL(string: self.href)
+        return URL(string: self.href.withoutWhiteCrap)
     }
 }
 
