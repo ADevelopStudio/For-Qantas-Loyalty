@@ -13,6 +13,10 @@
 		628B38B320E25CAB001F0A9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 628B38B220E25CAB001F0A9C /* Assets.xcassets */; };
 		628B38B620E25CAB001F0A9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 628B38B420E25CAB001F0A9C /* LaunchScreen.storyboard */; };
 		628B38C420E25CBB001F0A9C /* For_Qantas_LoyaltyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628B38C320E25CBB001F0A9C /* For_Qantas_LoyaltyTests.swift */; };
+		628B38CD20E25E00001F0A9C /* ViewController+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628B38CC20E25E00001F0A9C /* ViewController+Collection.swift */; };
+		628B38CF20E25F21001F0A9C /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628B38CE20E25F21001F0A9C /* Extentions.swift */; };
+		628B38D120E260F4001F0A9C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628B38D020E260F4001F0A9C /* Constants.swift */; };
+		628B38D320E2619C001F0A9C /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628B38D220E2619C001F0A9C /* ConnectionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		628B38C120E25CBB001F0A9C /* For Qantas LoyaltyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "For Qantas LoyaltyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		628B38C320E25CBB001F0A9C /* For_Qantas_LoyaltyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = For_Qantas_LoyaltyTests.swift; sourceTree = "<group>"; };
 		628B38C520E25CBB001F0A9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		628B38CC20E25E00001F0A9C /* ViewController+Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Collection.swift"; sourceTree = "<group>"; };
+		628B38CE20E25F21001F0A9C /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		628B38D020E260F4001F0A9C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		628B38D220E2619C001F0A9C /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +86,10 @@
 			isa = PBXGroup;
 			children = (
 				628B38AB20E25CAA001F0A9C /* AppDelegate.swift */,
-				628B38AD20E25CAA001F0A9C /* ViewController.swift */,
+				628B38CE20E25F21001F0A9C /* Extentions.swift */,
+				628B38D020E260F4001F0A9C /* Constants.swift */,
+				628B38D220E2619C001F0A9C /* ConnectionManager.swift */,
+				628B38CB20E25DF0001F0A9C /* New Group */,
 				628B38AF20E25CAA001F0A9C /* Main.storyboard */,
 				628B38B220E25CAB001F0A9C /* Assets.xcassets */,
 				628B38B420E25CAB001F0A9C /* LaunchScreen.storyboard */,
@@ -94,6 +105,15 @@
 				628B38C520E25CBB001F0A9C /* Info.plist */,
 			);
 			path = "For Qantas LoyaltyTests";
+			sourceTree = "<group>";
+		};
+		628B38CB20E25DF0001F0A9C /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				628B38AD20E25CAA001F0A9C /* ViewController.swift */,
+				628B38CC20E25E00001F0A9C /* ViewController+Collection.swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +217,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				628B38D120E260F4001F0A9C /* Constants.swift in Sources */,
+				628B38D320E2619C001F0A9C /* ConnectionManager.swift in Sources */,
+				628B38CF20E25F21001F0A9C /* Extentions.swift in Sources */,
 				628B38AE20E25CAA001F0A9C /* ViewController.swift in Sources */,
 				628B38AC20E25CAA001F0A9C /* AppDelegate.swift in Sources */,
+				628B38CD20E25E00001F0A9C /* ViewController+Collection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +385,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2QX9SH777P;
 				INFOPLIST_FILE = "For Qantas Loyalty/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -379,6 +404,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2QX9SH777P;
 				INFOPLIST_FILE = "For Qantas Loyalty/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
