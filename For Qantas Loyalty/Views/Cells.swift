@@ -27,6 +27,7 @@ class CellWithImage: UICollectionViewCell {
     }
 }
 
+
 class CellWithoutImage: UICollectionViewCell {
     @IBOutlet weak var title: UILabel!
     override func awakeFromNib() {

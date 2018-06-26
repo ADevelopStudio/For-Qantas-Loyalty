@@ -23,7 +23,7 @@ class LoadingImageView: UIImageView {
         self.backgroundColor = .groupTableViewBackground
         self.setAsEmpty()
         self.addSubview(loadingIndicator, constraints: {
-            $0.edges(.bottom).pinToSuperviewMargins()
+            $0.centerY.alignWithSuperview()
             $0.centerX.alignWithSuperview()
         })
     }
