@@ -12,7 +12,18 @@
 		628B38B120E25CAA001F0A9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 628B38AF20E25CAA001F0A9C /* Main.storyboard */; };
 		628B38B320E25CAB001F0A9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 628B38B220E25CAB001F0A9C /* Assets.xcassets */; };
 		628B38B620E25CAB001F0A9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 628B38B420E25CAB001F0A9C /* LaunchScreen.storyboard */; };
+		628B38C420E25CBB001F0A9C /* For_Qantas_LoyaltyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628B38C320E25CBB001F0A9C /* For_Qantas_LoyaltyTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		628B38C620E25CBB001F0A9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 628B38A020E25CAA001F0A9C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 628B38A720E25CAA001F0A9C;
+			remoteInfo = "For Qantas Loyalty";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		628B38A820E25CAA001F0A9C /* For Qantas Loyalty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "For Qantas Loyalty.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +33,20 @@
 		628B38B220E25CAB001F0A9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		628B38B520E25CAB001F0A9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		628B38B720E25CAB001F0A9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		628B38C120E25CBB001F0A9C /* For Qantas LoyaltyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "For Qantas LoyaltyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		628B38C320E25CBB001F0A9C /* For_Qantas_LoyaltyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = For_Qantas_LoyaltyTests.swift; sourceTree = "<group>"; };
+		628B38C520E25CBB001F0A9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		628B38A520E25CAA001F0A9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		628B38BE20E25CBB001F0A9C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				628B38AA20E25CAA001F0A9C /* For Qantas Loyalty */,
+				628B38C220E25CBB001F0A9C /* For Qantas LoyaltyTests */,
 				628B38A920E25CAA001F0A9C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				628B38A820E25CAA001F0A9C /* For Qantas Loyalty.app */,
+				628B38C120E25CBB001F0A9C /* For Qantas LoyaltyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,6 +85,15 @@
 				628B38B720E25CAB001F0A9C /* Info.plist */,
 			);
 			path = "For Qantas Loyalty";
+			sourceTree = "<group>";
+		};
+		628B38C220E25CBB001F0A9C /* For Qantas LoyaltyTests */ = {
+			isa = PBXGroup;
+			children = (
+				628B38C320E25CBB001F0A9C /* For_Qantas_LoyaltyTests.swift */,
+				628B38C520E25CBB001F0A9C /* Info.plist */,
+			);
+			path = "For Qantas LoyaltyTests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +116,24 @@
 			productReference = 628B38A820E25CAA001F0A9C /* For Qantas Loyalty.app */;
 			productType = "com.apple.product-type.application";
 		};
+		628B38C020E25CBB001F0A9C /* For Qantas LoyaltyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 628B38C820E25CBB001F0A9C /* Build configuration list for PBXNativeTarget "For Qantas LoyaltyTests" */;
+			buildPhases = (
+				628B38BD20E25CBB001F0A9C /* Sources */,
+				628B38BE20E25CBB001F0A9C /* Frameworks */,
+				628B38BF20E25CBB001F0A9C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				628B38C720E25CBB001F0A9C /* PBXTargetDependency */,
+			);
+			name = "For Qantas LoyaltyTests";
+			productName = "For Qantas LoyaltyTests";
+			productReference = 628B38C120E25CBB001F0A9C /* For Qantas LoyaltyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -96,6 +146,10 @@
 				TargetAttributes = {
 					628B38A720E25CAA001F0A9C = {
 						CreatedOnToolsVersion = 9.4.1;
+					};
+					628B38C020E25CBB001F0A9C = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 628B38A720E25CAA001F0A9C;
 					};
 				};
 			};
@@ -113,6 +167,7 @@
 			projectRoot = "";
 			targets = (
 				628B38A720E25CAA001F0A9C /* For Qantas Loyalty */,
+				628B38C020E25CBB001F0A9C /* For Qantas LoyaltyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +183,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		628B38BF20E25CBB001F0A9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -140,7 +202,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		628B38BD20E25CBB001F0A9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				628B38C420E25CBB001F0A9C /* For_Qantas_LoyaltyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		628B38C720E25CBB001F0A9C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 628B38A720E25CAA001F0A9C /* For Qantas Loyalty */;
+			targetProxy = 628B38C620E25CBB001F0A9C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		628B38AF20E25CAA001F0A9C /* Main.storyboard */ = {
@@ -312,6 +390,46 @@
 			};
 			name = Release;
 		};
+		628B38C920E25CBB001F0A9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2QX9SH777P;
+				INFOPLIST_FILE = "For Qantas LoyaltyTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "au.com.makemeapp.For-Qantas-LoyaltyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/For Qantas Loyalty.app/For Qantas Loyalty";
+			};
+			name = Debug;
+		};
+		628B38CA20E25CBB001F0A9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2QX9SH777P;
+				INFOPLIST_FILE = "For Qantas LoyaltyTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "au.com.makemeapp.For-Qantas-LoyaltyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/For Qantas Loyalty.app/For Qantas Loyalty";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -329,6 +447,15 @@
 			buildConfigurations = (
 				628B38BB20E25CAB001F0A9C /* Debug */,
 				628B38BC20E25CAB001F0A9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		628B38C820E25CBB001F0A9C /* Build configuration list for PBXNativeTarget "For Qantas LoyaltyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				628B38C920E25CBB001F0A9C /* Debug */,
+				628B38CA20E25CBB001F0A9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
