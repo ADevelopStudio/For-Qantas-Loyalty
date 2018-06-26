@@ -17,6 +17,11 @@
 		628B38CF20E25F21001F0A9C /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628B38CE20E25F21001F0A9C /* Extentions.swift */; };
 		628B38D120E260F4001F0A9C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628B38D020E260F4001F0A9C /* Constants.swift */; };
 		628B38D320E2619C001F0A9C /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628B38D220E2619C001F0A9C /* ConnectionManager.swift */; };
+		628B38D620E26798001F0A9C /* LoadingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628B38D520E26798001F0A9C /* LoadingImageView.swift */; };
+		628B38D820E267E4001F0A9C /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628B38D720E267E4001F0A9C /* Cells.swift */; };
+		628B38DE20E2683F001F0A9C /* UIView+constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628B38DD20E2683A001F0A9C /* UIView+constraints.swift */; };
+		628B38DF20E2683F001F0A9C /* Yalta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628B38DB20E26839001F0A9C /* Yalta.swift */; };
+		628B38E020E2683F001F0A9C /* Yalta+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628B38DC20E26839001F0A9C /* Yalta+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		628B38CE20E25F21001F0A9C /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		628B38D020E260F4001F0A9C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		628B38D220E2619C001F0A9C /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
+		628B38D520E26798001F0A9C /* LoadingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingImageView.swift; sourceTree = "<group>"; };
+		628B38D720E267E4001F0A9C /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
+		628B38DB20E26839001F0A9C /* Yalta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yalta.swift; sourceTree = "<group>"; };
+		628B38DC20E26839001F0A9C /* Yalta+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Yalta+Extensions.swift"; sourceTree = "<group>"; };
+		628B38DD20E2683A001F0A9C /* UIView+constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+constraints.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,11 +95,10 @@
 		628B38AA20E25CAA001F0A9C /* For Qantas Loyalty */ = {
 			isa = PBXGroup;
 			children = (
+				628B38D420E2678C001F0A9C /* Views */,
+				628B38CB20E25DF0001F0A9C /* VCs */,
+				628B38D920E26814001F0A9C /* Support Files */,
 				628B38AB20E25CAA001F0A9C /* AppDelegate.swift */,
-				628B38CE20E25F21001F0A9C /* Extentions.swift */,
-				628B38D020E260F4001F0A9C /* Constants.swift */,
-				628B38D220E2619C001F0A9C /* ConnectionManager.swift */,
-				628B38CB20E25DF0001F0A9C /* New Group */,
 				628B38AF20E25CAA001F0A9C /* Main.storyboard */,
 				628B38B220E25CAB001F0A9C /* Assets.xcassets */,
 				628B38B420E25CAB001F0A9C /* LaunchScreen.storyboard */,
@@ -107,13 +116,43 @@
 			path = "For Qantas LoyaltyTests";
 			sourceTree = "<group>";
 		};
-		628B38CB20E25DF0001F0A9C /* New Group */ = {
+		628B38CB20E25DF0001F0A9C /* VCs */ = {
 			isa = PBXGroup;
 			children = (
 				628B38AD20E25CAA001F0A9C /* ViewController.swift */,
 				628B38CC20E25E00001F0A9C /* ViewController+Collection.swift */,
 			);
-			path = "New Group";
+			path = VCs;
+			sourceTree = "<group>";
+		};
+		628B38D420E2678C001F0A9C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				628B38D520E26798001F0A9C /* LoadingImageView.swift */,
+				628B38D720E267E4001F0A9C /* Cells.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		628B38D920E26814001F0A9C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				628B38DA20E2682F001F0A9C /* Layout */,
+				628B38CE20E25F21001F0A9C /* Extentions.swift */,
+				628B38D020E260F4001F0A9C /* Constants.swift */,
+				628B38D220E2619C001F0A9C /* ConnectionManager.swift */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		628B38DA20E2682F001F0A9C /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				628B38DD20E2683A001F0A9C /* UIView+constraints.swift */,
+				628B38DB20E26839001F0A9C /* Yalta.swift */,
+				628B38DC20E26839001F0A9C /* Yalta+Extensions.swift */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,10 +257,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				628B38D120E260F4001F0A9C /* Constants.swift in Sources */,
+				628B38DF20E2683F001F0A9C /* Yalta.swift in Sources */,
+				628B38D820E267E4001F0A9C /* Cells.swift in Sources */,
 				628B38D320E2619C001F0A9C /* ConnectionManager.swift in Sources */,
 				628B38CF20E25F21001F0A9C /* Extentions.swift in Sources */,
 				628B38AE20E25CAA001F0A9C /* ViewController.swift in Sources */,
+				628B38E020E2683F001F0A9C /* Yalta+Extensions.swift in Sources */,
 				628B38AC20E25CAA001F0A9C /* AppDelegate.swift in Sources */,
+				628B38D620E26798001F0A9C /* LoadingImageView.swift in Sources */,
+				628B38DE20E2683F001F0A9C /* UIView+constraints.swift in Sources */,
 				628B38CD20E25E00001F0A9C /* ViewController+Collection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

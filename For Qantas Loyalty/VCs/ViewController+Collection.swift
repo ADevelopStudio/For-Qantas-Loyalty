@@ -9,14 +9,6 @@
 import Foundation
 import UIKit
 
-class CellWithImage: UICollectionViewCell {
-    
-}
-
-class CellWithoutImage: UICollectionViewCell {
-    
-}
-
 
 extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource{
         func numberOfSections(in collectionView: UICollectionView) -> Int {

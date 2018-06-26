@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -35,7 +36,33 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="106"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="w4g-UG-Sgy">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="106"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="right" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnP-y9-4Z3">
+                                                    <rect key="frame" x="18" y="76" width="339" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="Jg7-vT-5ec"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="w4g-UG-Sgy" secondAttribute="trailing" id="But-lB-vCL"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="nnP-y9-4Z3" secondAttribute="trailing" constant="10" id="G8F-mm-k7B"/>
+                                            <constraint firstItem="nnP-y9-4Z3" firstAttribute="leading" secondItem="wGU-4L-iyG" secondAttribute="leadingMargin" constant="10" id="JZ4-wE-QCP"/>
+                                            <constraint firstItem="w4g-UG-Sgy" firstAttribute="top" secondItem="wGU-4L-iyG" secondAttribute="top" id="Lqi-B9-8QT"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="nnP-y9-4Z3" secondAttribute="bottom" constant="1" id="O0Z-aE-GiM"/>
+                                            <constraint firstItem="w4g-UG-Sgy" firstAttribute="leading" secondItem="wGU-4L-iyG" secondAttribute="leading" id="il2-Ds-9dH"/>
+                                            <constraint firstAttribute="bottom" secondItem="w4g-UG-Sgy" secondAttribute="bottom" id="vNZ-i5-4nS"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="title" destination="nnP-y9-4Z3" id="uVV-uZ-Pbj"/>
+                                        </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellWithoutImage" id="5q4-g5-QZ9" customClass="CellWithoutImage" customModule="For_Qantas_Loyalty" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="116" width="375" height="106"/>
@@ -44,15 +71,25 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="106"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBt-hs-45K">
-                                                    <rect key="frame" x="20" y="43" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBt-hs-45K">
+                                                    <rect key="frame" x="20" y="43" width="335" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Y1B-LL-RHa"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="qBt-hs-45K" firstAttribute="leading" secondItem="5q4-g5-QZ9" secondAttribute="leadingMargin" constant="12" id="28P-Mo-6U5"/>
+                                            <constraint firstItem="qBt-hs-45K" firstAttribute="centerY" secondItem="5q4-g5-QZ9" secondAttribute="centerY" id="VWI-nI-Sjh"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="qBt-hs-45K" secondAttribute="trailing" constant="12" id="pfM-Ie-24A"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="title" destination="qBt-hs-45K" id="JTE-HD-LN0"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -89,7 +126,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bWT-oR-UgB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1961" y="134"/>
+            <point key="canvasLocation" x="1960.8" y="133.5832083958021"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="o1L-j1-BPw">
@@ -110,4 +147,7 @@
             <point key="canvasLocation" x="306" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="imagePlaceholder" width="85" height="85"/>
+    </resources>
 </document>
