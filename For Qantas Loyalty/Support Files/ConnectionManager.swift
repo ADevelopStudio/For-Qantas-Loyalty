@@ -50,10 +50,14 @@ import Foundation
 
 struct SearchResults: Codable {
     var allRecipes: [Recipe]
+    enum CodingKeys:String,CodingKey
+    {
+        case allRecipes = "results"
+    }
 }
 
 struct Recipe: Codable {
-    var title: Int
+    var title: String
     var href: String
     var ingredients: String
     var thumbnail: String
@@ -61,16 +65,12 @@ struct Recipe: Codable {
     var hrefUrl: URL? {
         return URL(string: self.href)
     }
-    var imageUrl: URL? {
-        return URL(string: self.thumbnail)
-    }
-    
 }
 
 
 
 struct ConnectionManager {
-    static let recipesBaseUrl = "https://g525204.github.io/recipes.json."
+    static let recipesBaseUrl = "https://g525204.github.io/recipes.json"
     
     static func getRecipes(completion: @escaping (_ recipes: [Recipe], _ errorMessage: String)->()) {
         guard let url = URL(string: recipesBaseUrl) else {
@@ -87,7 +87,6 @@ struct ConnectionManager {
                     throw JSONError.NoData
                 }
                 let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
                 guard let jsonSearchResults  = try? decoder.decode(SearchResults.self, from: data) else {
                     throw JSONError.ConversionFailed
                 }

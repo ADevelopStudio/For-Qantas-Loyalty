@@ -19,8 +19,7 @@ class LoadingImageView: UIImageView {
     
     private var imageLoader = ImageLoader()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    override func awakeFromNib() {
         self.backgroundColor = .groupTableViewBackground
         self.setAsEmpty()
         self.addSubview(loadingIndicator, constraints: {
@@ -29,10 +28,12 @@ class LoadingImageView: UIImageView {
         })
     }
     
-    
-    func fillWith(_ propertyMedias: [Media])  {
-        guard let firstImage = propertyMedias.first(where: {$0.mediaType == "image" && !$0.imageUrl.isEmpty}) else {return}
-        self.downloadImageFrom(urlString: firstImage.imageUrl)
+    func fillWith(_ linkSting: String)  {
+        if linkSting.isEmpty {
+            self.setError()
+            return
+        }
+        self.downloadImageFrom(urlString:linkSting)
     }
     
     private func downloadImageFrom(urlString: String) {
@@ -59,7 +60,4 @@ class LoadingImageView: UIImageView {
         self.image = #imageLiteral(resourceName: "imageError")
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
 }

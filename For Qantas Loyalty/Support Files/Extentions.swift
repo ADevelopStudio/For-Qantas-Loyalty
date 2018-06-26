@@ -10,18 +10,12 @@ import Foundation
 import UIKit
 
 extension UIView {
-    func bumpAnimation() {
-        UIView.animate(withDuration: 0.1, animations: {
-            self.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
-        }) { (completed) in
-            UIView.animate(withDuration: 0.1) {
-                self.transform = CGAffineTransform(scaleX: 1, y: 1)
-            }
-        }
+    func setCorner(cornerRadius: CGFloat = 7, borderWidth: CGFloat = 1, borderColor: UIColor = .clear)  {
+        self.layer.cornerRadius = cornerRadius
+        self.layer.borderColor = borderColor.cgColor
+        self.layer.borderWidth = borderWidth
+        self.clipsToBounds = true
     }
-}
-
-extension UIView {
     func tapFeedback(isLight: Bool = true)  {
         if #available(iOS 10.0, *) {
             if !isLight {
@@ -33,6 +27,20 @@ extension UIView {
             }
         }
     }
+}
+
+extension String {
+    var withoutWhiteCrap: String {
+        var newStr = Substring(self)
+        while newStr.hasPrefix(" ") || newStr.hasPrefix("\n") {
+            newStr = newStr.dropFirst()
+        }
+        while newStr.hasSuffix(" ") || newStr.hasSuffix("\n") {
+            newStr = newStr.dropLast()
+        }
+        return String(newStr)
+    }
+    
 }
 
 extension UIViewController {

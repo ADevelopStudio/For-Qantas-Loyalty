@@ -22,6 +22,7 @@
 		628B38DE20E2683F001F0A9C /* UIView+constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628B38DD20E2683A001F0A9C /* UIView+constraints.swift */; };
 		628B38DF20E2683F001F0A9C /* Yalta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628B38DB20E26839001F0A9C /* Yalta.swift */; };
 		628B38E020E2683F001F0A9C /* Yalta+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628B38DC20E26839001F0A9C /* Yalta+Extensions.swift */; };
+		628B38E220E272FB001F0A9C /* RecipeDetailedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628B38E120E272FB001F0A9C /* RecipeDetailedVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		628B38DB20E26839001F0A9C /* Yalta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yalta.swift; sourceTree = "<group>"; };
 		628B38DC20E26839001F0A9C /* Yalta+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Yalta+Extensions.swift"; sourceTree = "<group>"; };
 		628B38DD20E2683A001F0A9C /* UIView+constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+constraints.swift"; sourceTree = "<group>"; };
+		628B38E120E272FB001F0A9C /* RecipeDetailedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailedVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			children = (
 				628B38AD20E25CAA001F0A9C /* ViewController.swift */,
 				628B38CC20E25E00001F0A9C /* ViewController+Collection.swift */,
+				628B38E120E272FB001F0A9C /* RecipeDetailedVC.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				628B38AC20E25CAA001F0A9C /* AppDelegate.swift in Sources */,
 				628B38D620E26798001F0A9C /* LoadingImageView.swift in Sources */,
 				628B38DE20E2683F001F0A9C /* UIView+constraints.swift in Sources */,
+				628B38E220E272FB001F0A9C /* RecipeDetailedVC.swift in Sources */,
 				628B38CD20E25E00001F0A9C /* ViewController+Collection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

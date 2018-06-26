@@ -17,17 +17,19 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDe
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             if indexPath.section == 0 {
                 let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: "CellWithImage", for: indexPath) as! CellWithImage
+                cell.fillWith(recipe:  recipes.withimages[indexPath.row])
                 return cell
             } else {
                 let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: "CellWithoutImage", for: indexPath) as! CellWithoutImage
+                cell.fillWith(recipe:  recipes.withoutimages[indexPath.row])
                 return cell
             }
         }
         
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return 2
+            return section == 0 ? recipes.withimages.count : recipes.withoutimages.count
         }
-        
+    
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             if indexPath.section == 0 {
                 let isPortrait = UIScreen.main.bounds.height > UIScreen.main.bounds.width
@@ -35,7 +37,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDe
                 let width = (UIScreen.main.bounds.width - 16) / numberOfColumns - ((numberOfColumns - 1) * 5)
                 return CGSize(width: width , height: width)
             } else {
-                return CGSize(width: (UIScreen.main.bounds.width - 16)  , height: 60)
+                return CGSize(width: (UIScreen.main.bounds.width - 16)  , height: 70)
             }
         }
     
