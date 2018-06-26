@@ -8,8 +8,13 @@
 
 import Foundation
 import UIKit
+import SafariServices
 
-class RecipeDetailedVC: UIViewController {
+extension RecipeDetailedVC: UIViewControllerTransitioningDelegate {
+    //to use default modal presentation instead of push
+}
+
+class RecipeDetailedVC : UIViewController {
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var componentsLbl: UILabel!
@@ -26,7 +31,7 @@ class RecipeDetailedVC: UIViewController {
     
     func fill(with recipe: Recipe) {
         titleLbl.text = recipe.title.withoutWhiteCrap
-        componentsLbl.text = recipe.ingredients.withoutWhiteCrap.split(separator: ",").map({" • \($0)"}).joined(separator: "\n")
+        componentsLbl.text = recipe.ingredients.withoutWhiteCrap.split(separator: ",").map({" • \(String($0).withoutWhiteCrap)"}).joined(separator: "\n")
 
         let linklabelAtributes:[NSAttributedStringKey : Any]  = [
             NSAttributedStringKey.foregroundColor: UIColor.blue,
@@ -34,10 +39,16 @@ class RecipeDetailedVC: UIViewController {
             NSAttributedStringKey.underlineColor: UIColor.blue
         ]
         linkLbl.attributedText = NSAttributedString(string: recipe.href, attributes: linklabelAtributes)
+        
+        var imageLoader =  ImageLoader()
+        imageLoader.downloadImageFrom(urlString: recipe.thumbnail) {self.backgroundImage.image = $0}
     }
     
     @objc func openLink()  {
-        guard let link = recipe?.hrefUrl else {return}
-        
+        guard let url = recipe?.hrefUrl else {return}
+        UIApplication.shared.tapFeedback()
+        let safariViewController = SFSafariViewController(url: url)
+        safariViewController.transitioningDelegate = self
+        present(safariViewController, animated: true)
     }
 }

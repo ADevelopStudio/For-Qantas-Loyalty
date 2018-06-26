@@ -21,6 +21,10 @@ class CellWithImage: UICollectionViewCell {
         self.title.text = recipe.title.withoutWhiteCrap
         self.imageView.fillWith(recipe.thumbnail)
     }
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        imageView.setAsEmpty()
+    }
 }
 
 class CellWithoutImage: UICollectionViewCell {

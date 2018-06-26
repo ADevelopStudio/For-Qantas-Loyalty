@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-
 extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource{
         func numberOfSections(in collectionView: UICollectionView) -> Int {
             return 2
@@ -29,7 +28,9 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDe
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
             return section == 0 ? recipes.withimages.count : recipes.withoutimages.count
         }
+    
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            UIApplication.shared.tapFeedback()
             self.performSegue(withIdentifier: "details", sender: indexPath.section == 0 ? recipes.withimages[indexPath.row] : recipes.withoutimages[indexPath.row])
         }
     
@@ -54,6 +55,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDe
                 self.collection.performBatchUpdates({}) { (_) in }
             }, completion:nil)
         }
+    
         override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
             self.collection.performBatchUpdates({}) { (_) in }
         }

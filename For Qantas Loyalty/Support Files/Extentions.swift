@@ -9,13 +9,7 @@
 import Foundation
 import UIKit
 
-extension UIView {
-    func setCorner(cornerRadius: CGFloat = 7, borderWidth: CGFloat = 1, borderColor: UIColor = .clear)  {
-        self.layer.cornerRadius = cornerRadius
-        self.layer.borderColor = borderColor.cgColor
-        self.layer.borderWidth = borderWidth
-        self.clipsToBounds = true
-    }
+extension UIApplication {
     func tapFeedback(isLight: Bool = true)  {
         if #available(iOS 10.0, *) {
             if !isLight {
@@ -26,6 +20,16 @@ extension UIView {
                 selection.selectionChanged()
             }
         }
+    }
+}
+
+
+extension UIView {
+    func setCorner(cornerRadius: CGFloat = 7, borderWidth: CGFloat = 1, borderColor: UIColor = .clear)  {
+        self.layer.cornerRadius = cornerRadius
+        self.layer.borderColor = borderColor.cgColor
+        self.layer.borderWidth = borderWidth
+        self.clipsToBounds = true
     }
 }
 
